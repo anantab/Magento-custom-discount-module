@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+    <config>
+      <global>
+        <models>
+            <setdiscount>
+                <class>Customdiscount_Setdiscount_Model</class>
+            </setdiscount>
+        </models>
+        
+     <events>
+          <sales_quote_collect_totals_after><!--Event to override price after adding product to cart-->
+           <observers>
+              <customdiscount_setdiscount_price_observer><!--Any unique identifier name -->
+                <type>singleton</type>
+                <class>Customdiscount_Setdiscount_Model_Price_Observer</class><!--Our observer class name-->
+                  <method>set_product_discount</method><!--Method to be called from our observer class-->
+              </customdiscount_setdiscount_price_observer>
+           </observers>
+         </sales_quote_collect_totals_after>
+        </events>
+      
+      </global>
+    </config>

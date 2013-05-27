@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+    <config>
+      <modules>
+        <Customdiscount_Setdiscount>
+          <codePool>local</codePool>
+          <active>true</active>
+        </Customdiscount_Setdiscount>
+      </modules>
+    </config>
